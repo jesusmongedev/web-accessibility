@@ -41,10 +41,10 @@ img {
   --blanco: white;
   --gris-medio: #333333;
   --gris-oscuro: #1e1e1e;
-  --main-font: "Oswald", sans-serif;
-  --secondary-font: "Open Sans", sans-serif;
+  --main-font: 'Oswald', sans-serif;
+  --secondary-font: 'Open Sans', sans-serif;
   --shadow: rgba(0, 0, 0, 0.75);
-  --verde: #7ac943;
+  --primary-color: #0571f8;
 }
 
 body {
@@ -52,23 +52,24 @@ body {
   background-color: var(--gris-medio);
   display: flex;
   flex-direction: column;
+  color: var(--blanco);
 }
 
 .header {
-  color: var(--blanco);
   font-family: var(--main-font);
   font-size: 55px;
   margin-top: 16px;
 }
 
 .subtitle {
-  color: var(--verde);
+  color: var(--primary-color);
   font-family: var(--secondary-font);
   font-size: 24px;
 }
 
 .header-img {
-  background: center / contain no-repeat url(./images/juliana.jpeg);
+  background: center / contain no-repeat
+    url('https://i.postimg.cc/D051zVGh/JM-Profile-Picture.jpg');
   border-radius: 50%;
   border: 1px solid var(--gris-oscuro);
   box-shadow: 8px 16px 32px 0px var(--shadow);
@@ -97,7 +98,7 @@ body {
 }
 
 .nav-item:hover {
-  background-color: var(--verde);
+  background-color: var(--primary-color);
 }
 
 .intro {
@@ -106,11 +107,19 @@ body {
 }
 
 .social-media {
-  align-items: center;
   display: flex;
-  justify-content: space-around;
-  margin: 32px auto 0;
-  width: 20%;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5em;
+  margin-top: 32px;
+}
+.social-media > div i {
+  font-size: 2.5rem;
+  transition: 0.3s all ease-out;
+}
+
+.social-media > div i:hover {
+  transform: scale(1.25);
 }
 
 .carousel {
@@ -177,13 +186,13 @@ body {
 
 .arrow-left {
   background: center / contain no-repeat url(./images/play-button-left.png);
-  background-color: var(--verde);
+  background-color: var(--primary-color);
   border-radius: 50%;
 }
 
 .arrow-right {
   background: center / contain no-repeat url(./images/play-button-right.png);
-  background-color: var(--verde);
+  background-color: var(--primary-color);
   border-radius: 50%;
 }
 
@@ -213,7 +222,7 @@ input {
 
 .send-button {
   align-items: center;
-  background-color: var(--verde);
+  background-color: var(--primary-color);
   border-radius: 5px;
   color: white;
   font-family: var(--secondary-font);
@@ -227,7 +236,7 @@ input {
 
 .notification {
   align-items: center;
-  background-color: var(--verde);
+  background-color: var(--primary-color);
   border-radius: 5px;
   box-shadow: 8px 16px 32px 0px var(--shadow);
   color: var(--blanco);
