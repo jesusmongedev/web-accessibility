@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
@@ -17,71 +17,134 @@
   </head>
 
   <body>
-    <div class="header-img"></div>
-    <div class="header">Jesus Monge</div>
-    <div class="subtitle">Front End Developer</div>
-    <div class="navigation">
-      <div class="nav-item">About me</div>
-      <div class="nav-item">Projects</div>
-      <div class="nav-item">Contact</div>
-    </div>
+    <header class="header">
+      <img
+        src="https://i.postimg.cc/D051zVGh/JM-Profile-Picture.jpg"
+        alt="Jesus Monge"
+        class="header__img"
+      />
+      <h1 class="header__tittle">Jesus Monge</h1>
+      <h2 class="header__subtitle">Front End Developer</h2>
+      <nav class="navigation">
+        <ul class="nav__item">
+          <li><a href="#">About me</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <div class="intro">
-      <p>
-        👋 Hello, I am a Petroleum Engineer who noticed the increase in startups
-        and smart devices in Latin America and the world, for any website or
-        commercial application, a frontend developer is necessary.
-      </p>
-      <br />
-      <p>
-        I am currently looking to collaborate in a work team in the technology
-        field, to diagnose, analyze and deliver solutions that meet user
-        requirements. Creating applications that revolutionize the world,
-        optimizing and automating.
-      </p>
+    <main>
+      <section>
+        <h2 class="header__tittle">About me</h2>
+        <p class="intro">
+          👋 Hello, I am a Petroleum Engineer who noticed the increase in
+          startups and smart devices in Latin America and the world, for any
+          website or commercial application, a frontend developer is necessary.
+          <br /><br />
+          I am currently looking to collaborate in a work team in the technology
+          field, to diagnose, analyze and deliver solutions that meet user
+          requirements. Creating applications that revolutionize the world,
+          optimizing and automating.
+        </p>
+        <ul class="social-media">
+          <li>
+            <a
+              href="https://twitter.com/jmongedev"
+              target="_blank"
+              title="Jesus' twitter"
+              ><i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/jesusmongedev"
+              target="_blank"
+              title="Jesus' github"
+              ><i class="fab fa-github"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/jesusandresmonge/?locale=en_US"
+              title="Jesus' linkedin"
+              target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </li>
+        </ul>
+      </section>
 
-      <div class="social-media">
-        <div>
-          <a href="https://twitter.com/gmzjuliana" target="_blank"
-            ><i class="fab fa-twitter"></i>
-          </a>
+      <!-- <section>
+        <h2 class="header__tittle">Projects</h2>
+        <div class="carousel">
+          <div class="arrow arrow-left"></div>
+          <div class="window">
+            <ul class="project-container">
+              <li>
+                <button>
+                  <img
+                    src="images/project1.png"
+                    alt="First project"
+                    class="project"
+                  />
+                </button>
+              </li>
+              <li>
+                <button>
+                  <img
+                    src="images/project2.png"
+                    alt="Second project"
+                    class="project"
+                  />
+                </button>
+              </li>
+              <li>
+                <button>
+                  <img
+                    src="images/project3.png"
+                    alt="Third project"
+                    class="project"
+                  />
+                </button>
+              </li>
+              <li>
+                <button>
+                  <img
+                    src="images/project4.png"
+                    alt="Fourth project"
+                    class="project"
+                  />
+                </button>
+              </li>
+              <li>
+                <button>
+                  <img
+                    src="images/project5.png"
+                    alt="Fifth project"
+                    class="project"
+                  />
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div class="arrow arrow-right"></div>
         </div>
-        <div>
-          <a href="https://github.com/gmzjuliana" target="_blank"
-            ><i class="fab fa-github"></i
-          ></a>
-        </div>
-        <div>
-          <a href="https://www.linkedin.com/in/gomezjuliana/" target="_blank"
-            ><i class="fab fa-linkedin"></i
-          ></a>
-        </div>
-      </div>
-    </div>
+      </section> -->
+    </main>
 
-    <div class="carousel">
-      <div class="arrow arrow-left"></div>
-      <div class="window">
-        <div class="project-container">
-          <div class="project project1"></div>
-          <div class="project project2"></div>
-          <div class="project project3"></div>
-          <div class="project project4"></div>
-          <div class="project project5"></div>
-        </div>
-      </div>
-      <div class="arrow arrow-right"></div>
-    </div>
+    <footer class="contact-section">
+      <h2 class="header__tittle">Contacto</h2>
+      <form class="form-container">
+        <label for="name">Nombre</label><input type="text" id="name" /> <br />
+        <label for="email">Correo</label><input type="email" id="email" />
+        <br />
+        <label for="message" class="message-input">Mensaje </label>
+        <textarea id="message" cols="30" rows="10"></textarea> <br />
+        <button class="send-button" type="submit">Enviar</button>
+      </form>
+    </footer>
 
-    <div class="contact-section">
-      <div class="header">Contacto</div>
-      <div class="form-container">
-        Nombre<input type="text" /> <br />
-        Correo<input type="text" /> <br />
-        <div class="message-input">Mensaje<input type="text" /> <br /></div>
-        <div class="send-button">Enviar</div>
-      </div>
-    </div>
     <div class="notification">El formulario fue enviado sin errores</div>
     <div class="modal-container">
       <div class="modal">
