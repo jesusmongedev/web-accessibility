@@ -27,15 +27,15 @@
       <h2 class="header__subtitle">Front End Developer</h2>
       <nav class="navigation">
         <ul class="nav__item">
-          <li><a href="#">About me</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#about">About me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section>
+      <section id="about">
         <h2 class="header__tittle">About me</h2>
         <p class="intro">
           👋 Hello, I am a Petroleum Engineer who noticed the increase in
@@ -75,16 +75,19 @@
         </ul>
       </section>
 
-      <!-- <section>
+      <section id="projects">
         <h2 class="header__tittle">Projects</h2>
         <div class="carousel">
-          <div class="arrow arrow-left"></div>
+          <button
+            class="arrow arrow-left"
+            aria-label="backward button"
+          ></button>
           <div class="window">
             <ul class="project-container">
               <li>
                 <button>
                   <img
-                    src="images/project1.png"
+                    src="https://i.postimg.cc/gjGcmVfW/marvol.png"
                     alt="First project"
                     class="project"
                   />
@@ -93,7 +96,7 @@
               <li>
                 <button>
                   <img
-                    src="images/project2.png"
+                    src="https://i.postimg.cc/gjGcmVfW/marvol.png"
                     alt="Second project"
                     class="project"
                   />
@@ -102,7 +105,7 @@
               <li>
                 <button>
                   <img
-                    src="images/project3.png"
+                    src="https://i.postimg.cc/gjGcmVfW/marvol.png"
                     alt="Third project"
                     class="project"
                   />
@@ -111,7 +114,7 @@
               <li>
                 <button>
                   <img
-                    src="images/project4.png"
+                    src="https://i.postimg.cc/gjGcmVfW/marvol.png"
                     alt="Fourth project"
                     class="project"
                   />
@@ -120,7 +123,7 @@
               <li>
                 <button>
                   <img
-                    src="images/project5.png"
+                    src="https://i.postimg.cc/gjGcmVfW/marvol.png"
                     alt="Fifth project"
                     class="project"
                   />
@@ -128,21 +131,35 @@
               </li>
             </ul>
           </div>
-          <div class="arrow arrow-right"></div>
+          <button
+            class="arrow arrow-right"
+            aria-label="forward button"
+          ></button>
         </div>
-      </section> -->
+      </section>
     </main>
 
-    <footer class="contact-section">
-      <h2 class="header__tittle">Contacto</h2>
+    <section class="contact-section">
       <form class="form-container">
-        <label for="name">Nombre</label><input type="text" id="name" /> <br />
-        <label for="email">Correo</label><input type="email" id="email" />
-        <br />
-        <label for="message" class="message-input">Mensaje </label>
-        <textarea id="message" cols="30" rows="10"></textarea> <br />
+        <h2 class="header__tittle">Contact</h2>
+        <label>Name:<input type="first-name" /></label>
+        <label>Email:<input type="email" id="email" /></label>
+        <label class="message-input"
+          >Message: <textarea cols="30" rows="10"></textarea>
+        </label>
         <button class="send-button" type="submit">Enviar</button>
       </form>
+    </section>
+
+    <footer id="contact">
+      <div class="footer-content">
+        <div class="footer-description">
+          <p>Hecho con ❤️ de <span class="jesus-contrast"> Jesus.</span></p>
+          <p class="footer-description-copyright">
+            Copyright 2022 - Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
     </footer>
 
     <div class="notification">El formulario fue enviado sin errores</div>

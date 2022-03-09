@@ -1,7 +1,7 @@
 /* css reset */
 html {
   box-sizing: border-box;
-  font-size: 1rem;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -25,7 +25,6 @@ ul {
   font-weight: normal;
 }
 
-ol,
 ul {
   list-style: none;
 }
@@ -45,6 +44,20 @@ img {
   --secondary-font: 'Open Sans', sans-serif;
   --shadow: rgba(0, 0, 0, 0.75);
   --primary-color: #0571f8;
+  /* typography */
+  --h1-font-size: 2.25rem;
+  --h2-font-size: 1.5rem;
+  --body-font-size: 1rem;
+  --icon-size: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --h1-font-size: 3rem;
+    --h2-font-size: 2rem;
+    --body-font-size: 1.5rem;
+    --icon-size: 2.5rem;
+  }
 }
 
 body {
@@ -52,6 +65,8 @@ body {
   background-color: var(--gris-medio);
   display: flex;
   flex-direction: column;
+  font-size: var(--body-font-size);
+  font-family: var(--secondary-font);
   color: var(--blanco);
 }
 
@@ -63,14 +78,13 @@ body {
 .header__tittle {
   text-align: center;
   font-family: var(--main-font);
-  font-size: 2.25rem;
+  font-size: var(--h1-font-size);
   margin-top: 16px;
 }
 
 .header__subtitle {
   color: var(--primary-color);
-  font-family: var(--secondary-font);
-  font-size: 1.5rem;
+  font-size: var(--h2-font-size);
 }
 
 .header__img {
@@ -85,7 +99,6 @@ body {
 
 .navigation {
   color: var(--blanco);
-  cursor: pointer;
   display: flex;
   justify-content: space-around;
 }
@@ -94,8 +107,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 5px;
-  font-family: var(--secondary-font);
   margin: 24px 0;
   gap: 0.5em;
 }
@@ -104,6 +115,9 @@ body {
   text-decoration: none;
   color: var(--blanco);
   padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: var(--body-font-size);
 }
 
 .nav__item li a:hover {
@@ -111,7 +125,6 @@ body {
 }
 
 .intro {
-  font-family: var(--secondary-font);
   width: 85%;
   margin: 24px auto;
 }
@@ -124,13 +137,15 @@ body {
   margin-top: 32px;
 }
 .social-media > li i {
-  color: inherit;
-  font-size: 2rem;
+  color: var(--primary-color);
+  opacity: 0.85;
+  font-size: var(--icon-size);
   transition: 0.3s all ease-out;
 }
 
 .social-media > li i:hover {
   transform: scale(1.25);
+  opacity: 1;
 }
 
 .carousel {
@@ -142,13 +157,11 @@ body {
 
 .window {
   overflow: hidden;
-  width: 805px;
+  width: 100%;
 }
 
 .project-container {
-  left: 0;
-  position: relative;
-  width: 1500px;
+  text-align: center;
 }
 
 .project-container li {
@@ -158,16 +171,16 @@ body {
 .project-container button {
   background: none;
   border: none;
+  margin-bottom: 2em;
 }
 
 .project {
   border-radius: 5px;
   border: 2px solid #000;
-  display: inline-block;
   height: 400px;
-  margin: 0 8px;
   transition: all 0.2s ease-in-out;
   width: 250px;
+  object-position: center;
   object-fit: cover;
 }
 
@@ -177,9 +190,13 @@ body {
 }
 
 .arrow {
-  height: 75px;
+  height: 30px;
   transition: all 0.2s ease-in-out;
-  width: 75px;
+  width: 30px;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  display: none;
 }
 
 .arrow:hover {
@@ -188,53 +205,59 @@ body {
 
 .arrow-left {
   background: center / contain no-repeat url(./images/play-button-left.png);
-  background-color: var(--primary-color);
-  border-radius: 50%;
 }
 
 .arrow-right {
   background: center / contain no-repeat url(./images/play-button-right.png);
+}
+
+.arrow-left,
+.arrow-right {
   background-color: var(--primary-color);
-  border-radius: 50%;
 }
 
 .contact-section {
   align-items: center;
-  background-color: var(--gris-oscuro);
   display: flex;
   flex-direction: column;
   width: 100%;
   margin-top: 2em;
+  background-color: var(--gris-oscuro);
 }
 
 .form-container {
   display: flex;
   flex-direction: column;
+  gap: 1em;
   width: 85%;
 }
 
-.message-input input {
-  height: 150px;
-  margin-bottom: 16px;
+.message-input {
+  display: flex;
+  flex-direction: column;
 }
 
-input {
+input,
+textarea {
   outline: none;
   width: 100%;
+  font-size: inherit;
+  font-family: inherit;
 }
 
 .send-button {
   align-items: center;
   background-color: var(--primary-color);
+  border: none;
   border-radius: 5px;
   color: white;
-  font-family: var(--secondary-font);
+  font-size: inherit;
   display: flex;
-  height: 50px;
   justify-content: center;
   margin-bottom: 48px;
-  width: 150px;
   margin-left: auto;
+  padding: 0.75em 1.75em;
+  cursor: pointer;
 }
 
 .notification {
@@ -244,7 +267,6 @@ input {
   box-shadow: 8px 16px 32px 0px var(--shadow);
   color: var(--blanco);
   display: none;
-  font-family: var(--secondary-font);
   height: 50px;
   justify-content: center;
   position: fixed;
@@ -284,4 +306,75 @@ input {
   height: 400px;
   margin: 16px;
   width: 550px;
+}
+
+.footer-logo {
+  display: none;
+  cursor: pointer;
+  inline-size: 40px;
+}
+
+.footer-social {
+  justify-content: center;
+}
+
+.footer-description {
+  text-align: center;
+  color: var(--black);
+}
+
+.footer-description p.footer-description-copyright {
+  margin-block-start: 8px;
+  margin-block-end: 24px;
+}
+
+.footer-description span.heart-icon {
+  /* vertical-align«, que nos va a permitir que el texto se empiece a escribir en la parte de arriba de la imagen, desde el centro o en la parte inferior. */
+  /* vertical-align: text-top;
+    vertical-align: middle;
+    vertical-align: text-bottom; */
+  vertical-align: middle;
+}
+
+.jesus-contrast {
+  color: var(--black);
+  font-weight: bold;
+  /* text-transform: uppercase; */
+}
+
+@media screen and (min-width: 768px) {
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block-end: 40px;
+    margin-block-start: 40px;
+  }
+
+  .footer-logo {
+    display: block;
+  }
+
+  .footer-social {
+    order: 1;
+    padding-block-end: 0px;
+  }
+
+  .footer-description p.footer-description-copyright {
+    margin-block-start: 0;
+    margin-block-end: 0px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer-description {
+    display: flex;
+    gap: 8px;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  .footer-description {
+    margin: 0 0 0 202px;
+  }
 }
