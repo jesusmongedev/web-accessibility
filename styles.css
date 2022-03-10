@@ -34,6 +34,11 @@ img {
   height: auto;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /*--- end of reset ----*/
 
 :root {
@@ -70,6 +75,24 @@ body {
   color: var(--blanco);
 }
 
+.skip-link {
+  height: 0;
+  color: var(--navy-bg);
+}
+.skip-link:focus,
+.skip-link:active {
+  height: auto;
+  display: block;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 5px;
+  font-size: inherit;
+  color: var(--blanco);
+  margin-top: 4em;
+  padding: 0.75em 1.75em;
+  cursor: pointer;
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -102,8 +125,6 @@ body {
 }
 
 .nav__item li a {
-  text-decoration: none;
-  color: var(--blanco);
   padding: 6px 12px;
   cursor: pointer;
   border-radius: 5px;
@@ -115,7 +136,7 @@ body {
 }
 
 .section {
-  margin-bottom: 2em;
+  margin: 2em 0;
 }
 .intro {
   width: 85%;
@@ -129,6 +150,13 @@ body {
   gap: 1.5em;
   margin-top: 32px;
 }
+
+.social-media li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .social-media > li i {
   color: var(--primary-color);
   opacity: 0.85;
@@ -139,6 +167,16 @@ body {
 .social-media > li i:hover {
   transform: scale(1.25);
   opacity: 1;
+}
+
+.social-links-tittle {
+  margin-top: 0.5em;
+  font-weight: bold;
+}
+
+#projects {
+  margin: 2em 0;
+  padding-top: 2em;
 }
 
 .carousel {
@@ -214,7 +252,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-top: 2em;
+  margin-top: 6em;
   background-color: var(--gris-oscuro);
 }
 
@@ -239,15 +277,12 @@ textarea {
 }
 
 .send-button {
-  align-items: center;
   background-color: var(--primary-color);
   border: none;
   border-radius: 5px;
   color: white;
   font-size: inherit;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 48px;
+  margin-bottom: 2em;
   margin-left: auto;
   padding: 0.75em 1.75em;
   cursor: pointer;

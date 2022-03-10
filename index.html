@@ -17,6 +17,7 @@
   </head>
 
   <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
     <header class="header">
       <img
         src="https://i.postimg.cc/fyB1sHyT/jesus-profile.png"
@@ -29,15 +30,15 @@
       </div>
       <nav class="navigation">
         <ul class="nav__item">
-          <li><a href="#about">About me</a></li>
+          <li><a href="#main">About me</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
 
-    <main>
-      <section class="section" id="about">
+    <main id="main">
+      <section class="section">
         <h2 class="header__tittle">About me</h2>
         <p class="intro">
           👋 Hello, I am a Petroleum Engineer who noticed the increase in
@@ -56,6 +57,7 @@
               target="_blank"
               title="Jesus' twitter"
               ><i class="fab fa-twitter"></i>
+              <p class="social-links-tittle">Twitter</p>
             </a>
           </li>
           <li>
@@ -64,7 +66,8 @@
               target="_blank"
               title="Jesus' github"
               ><i class="fab fa-github"></i
-            ></a>
+            >
+          <p class="social-links-tittle">GitHub</p></a>
           </li>
           <li>
             <a
@@ -72,7 +75,8 @@
               title="Jesus' linkedin"
               target="_blank"
               ><i class="fab fa-linkedin"></i
-            ></a>
+            >
+          <p class="social-links-tittle">LinkedIn</p></a>
           </li>
         </ul>
       </section>
@@ -141,7 +145,7 @@
       </section>
     </main>
 
-    <section class="contact-section">
+    <section class="contact-section" id="contact">
       <form class="form-container">
         <h2 class="header__tittle">Contact</h2>
         <label>Name:<input type="first-name" /></label>
@@ -153,7 +157,7 @@
       </form>
     </section>
 
-    <footer class="footer" id="contact">
+    <footer class="footer">
       <p>Hecho con ❤️ de <strong> Jesus.</strong></p>
       <p class="footer-description-copyright">
         &#169 Copyright 2022 - Todos los derechos reservados.
