@@ -93,6 +93,10 @@ body {
   cursor: pointer;
 }
 
+.skip-link:focus {
+  outline: 0.25em solid var(--blanco);
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -131,8 +135,12 @@ body {
   font-size: var(--body-font-size);
 }
 
-.nav__item li a:hover {
+.nav__item li a:hover,
+.nav__item li a:focus {
   background-color: var(--primary-color);
+}
+.nav__item li a:focus {
+  outline: none;
 }
 
 .section {
@@ -155,18 +163,22 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.social-media > li i {
-  color: var(--primary-color);
   opacity: 0.85;
-  font-size: var(--icon-size);
   transition: 0.3s all ease-out;
 }
+li a:focus {
+  outline: none;
+}
 
-.social-media > li i:hover {
+.social-media li a:hover,
+.social-media li a:focus {
   transform: scale(1.25);
   opacity: 1;
+}
+
+.social-media li i {
+  color: var(--primary-color);
+  font-size: var(--icon-size);
 }
 
 .social-links-tittle {
@@ -189,35 +201,33 @@ body {
 .window {
   overflow: hidden;
   width: 100%;
+  padding: 2em;
 }
 
 .project-container {
-  text-align: center;
-}
-
-.project-container li {
-  display: inline-block;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, 284px);
 }
 
 .project-container button {
   background: none;
   border: none;
   margin-bottom: 2em;
+  padding: 0;
+  transition: all 0.2s ease-in-out;
+}
+.project-container button:hover,
+.project-container button:focus {
+  cursor: pointer;
+  transform: scale(1.1);
+  outline: none;
 }
 
 .project {
   border-radius: 5px;
-  border: 2px solid #000;
-  height: 400px;
-  transition: all 0.2s ease-in-out;
-  width: 250px;
-  object-position: center;
+  height: 380px;
   object-fit: cover;
-}
-
-.project:hover {
-  cursor: pointer;
-  transform: scale(1.1);
 }
 
 .arrow {
@@ -286,6 +296,10 @@ textarea {
   margin-left: auto;
   padding: 0.75em 1.75em;
   cursor: pointer;
+}
+
+.send-button:focus {
+  outline: 0.25em solid var(--blanco);
 }
 
 .notification {
