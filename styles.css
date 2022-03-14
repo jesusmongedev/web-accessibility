@@ -187,77 +187,11 @@ li a:focus {
   letter-spacing: 0.05em;
 }
 
-#projects {
-  margin: 2em 0;
-  padding-top: 2em;
-}
-
-.carousel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 48px 0 64px;
-}
-
-.window {
-  padding: 2em 0;
-}
-
-.project-container li {
-  display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fill, 284px);
-}
-.project-container button {
-  background: none;
-  border: none;
-  margin-bottom: 2em;
-  padding: 0;
-  transition: all 0.2s ease-in-out;
-}
-.project-container button:hover,
-.project-container button:focus {
-  cursor: pointer;
-  transform: scale(1.1);
-  outline: none;
-}
-
-.project {
-  border-radius: 5px;
-  height: 380px;
-  object-fit: cover;
-}
-
-.arrow {
-  height: 30px;
-  transition: all 0.2s ease-in-out;
-  width: 30px;
-  cursor: pointer;
-  border: none;
-  border-radius: 50%;
-  display: none;
-}
-
-.arrow:hover {
-  transform: scale(1.1);
-}
-
-.arrow-left {
-  background: center / contain no-repeat url(./images/play-button-left.png);
-}
-
-.arrow-right {
-  background: center / contain no-repeat url(./images/play-button-right.png);
-}
-
-.arrow-left,
-.arrow-right {
-  background-color: var(--primary-color);
-}
+/* Image-Slider */
 
 .contact-section {
-  align-items: center;
   display: flex;
+  align-items: center;
   flex-direction: column;
   width: 100%;
   margin-top: 6em;
@@ -352,7 +286,8 @@ textarea:focus {
 }
 
 .modal-project-image {
-  background: center / cover no-repeat url(./images/project1.png);
+  background: center / cover no-repeat
+    url('https://i.postimg.cc/bwCKfLX9/project1.jpg');
   border-radius: 5px;
   border: 2px solid #000;
   height: 400px;
