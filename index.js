@@ -12,7 +12,7 @@ const intervalo = setInterval(() => {
   if (counter > 4) {
     counter = 1
   }
-}, 5000)
+}, 4000)
 
 $slider.addEventListener('mouseenter', () => {
   clearInterval(intervalo)

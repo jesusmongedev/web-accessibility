@@ -221,8 +221,8 @@ li a:focus {
 .navigation-manual {
   display: none;
   position: absolute;
-  width: 800px;
   bottom: 1em;
+  width: 800px;
 }
 .manual-btn {
   border: 2px solid var(--primary-color);
@@ -257,8 +257,8 @@ li a:focus {
 .navigation-auto {
   display: none;
   position: absolute;
-  width: 800px;
   bottom: 1em;
+  width: 800px;
 }
 
 @media screen and (min-width: 800px) {
